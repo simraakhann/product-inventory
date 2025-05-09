@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inventory Form</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="card-header bg-info text-dark text-center">
+            <h2>Inventory</h2>
+        </div>
+        <form id="inventoryForm" novalidate>
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName" />
+            <div class="error" id="nameError">Please enter product name.</div>
+
+            <label for="productDescription">Product Description</label>
+            <textarea id="productDescription"></textarea>
+            <div class="error" id="descError">Please enter product description.</div>
+
+            <label for="productQuantity">Product Quantity</label>
+            <input type="number" id="productQuantity" min="1" />
+            <div class="error" id="quantityError">Please enter a valid quantity (positive integer).</div>
+
+            <label for="productPrice">Product Price</label>
+            <input type="number" id="productPrice" min="0.01" step="0.01" />
+            <div class="error" id="priceError">Please enter a valid price (positive number).</div>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div class="success-message" id="successMessage">Form submitted successfully!</div>
+    </div>
+
+</body>
+<script src="./script.js"></script>
+
+</html>
